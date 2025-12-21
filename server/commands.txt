@@ -1,0 +1,18 @@
+
+# Build the Docker image
+docker build -t docker-backend .
+
+# Run with environment variables from .env file
+docker run -p 3000:3000 --name backend --env-file .env docker-backend
+
+# Test it
+curl http://localhost:3000/health
+
+
+
+
+npm i -D eslint prettier
+
+npm run lint
+npm run format
+npm run lint:fix
