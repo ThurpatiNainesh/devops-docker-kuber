@@ -2,7 +2,7 @@ mkdir -p ~/.ssh
 mv ~/Downloads/keypair1n.pem ~/.ssh/
 chmod 400 ~/.ssh/keypair1.pem
 ssh -i ~/.ssh/keypair1.pem ec2-user@13.233.98.147
-
+cat ~/.ssh/keypair1.pem (to view ssh key pair)
 nano install_docker_amazon.sh
 
 
@@ -68,7 +68,22 @@ cd app
 
 nano server/.env
 
+git pull
 
+docker compose build
+
+docker compose up -d
+
+docker compose logs
+
+docker compose ps 
+
+
+
+
+http://13.233.98.147:5173/
+
+http://13.233.98.147:5000/
 
 
 
