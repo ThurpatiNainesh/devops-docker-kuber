@@ -25,8 +25,6 @@ RUN npm install
 # We do this AFTER npm install so code changes don't trigger dependency reinstalls
 COPY . .
 
-ARG VITE_APP_URL
-ENV VITE_APP_URL=${VITE_APP_URL}
 # Build the application for production
 # This typically creates an optimized bundle in a dist/ or build/ folder
 # The build step compiles and optimizes your code for better performance
